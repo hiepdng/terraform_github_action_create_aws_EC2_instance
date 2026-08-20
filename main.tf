@@ -14,7 +14,7 @@ provider "aws" {
 
 # 1. Provision the EC2 instance (AWS will initially start it)
 resource "aws_instance" "my_insta_instance" {
-  ami           = "ami-0c7217cdde317cfec" # Replace with your valid AMI ID
+  ami           = "ami-0c7217cdde317cfec"
   instance_type = "t2.micro"
 
   tags = {
