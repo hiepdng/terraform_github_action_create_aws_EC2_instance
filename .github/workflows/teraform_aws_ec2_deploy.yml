@@ -1,12 +1,13 @@
 name: Terraform create AWS EC2 instance
 
 on: 
-  push: 
+  #push: 
+  workflow_dispatch: 
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+  #pull_request:
+  #  branches:
+  #    - main
 
 jobs:
   terraform:
@@ -39,5 +40,5 @@ jobs:
         run: terraform plan -no-color
 
       - name: Terraform Apply
-        #if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: terraform apply -auto-approve
