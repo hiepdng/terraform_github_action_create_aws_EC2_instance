@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1" 
+  region = "us-east-1"
 }
 
 # 1. Provision the EC2 instance (AWS will initially start it)
