@@ -1,4 +1,4 @@
-name: Terraform create AWS EC3 instance
+name: Terraform create AWS EC2 instance
 
 on: 
   #push:
