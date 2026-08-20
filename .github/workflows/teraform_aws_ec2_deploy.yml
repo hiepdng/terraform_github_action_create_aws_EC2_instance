@@ -1,4 +1,4 @@
-name: Terraform AWS Pipeline
+name: Terraform create AWS EC3 instance
 
 on: 
   #push:
