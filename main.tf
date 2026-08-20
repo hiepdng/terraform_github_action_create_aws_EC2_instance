@@ -26,4 +26,7 @@ resource "aws_instance" "my_insta_instance" {
 resource "aws_ec2_instance_state" "stop_my_instance" {
   instance_id = aws_instance.my_insta_instance.id
   state       = "stopped"
+
+# Explicit dependency prevents race conditions during deployment
+  depends_on = [aws_instance.my_insta_instance]
 }
