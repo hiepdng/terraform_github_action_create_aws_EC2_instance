@@ -1,13 +1,12 @@
 name: Terraform create AWS EC2 instance
 
 on: 
-  #push:
-  workflow_dispatch: 
+  push: 
     branches:
       - main
-  #pull_request:
-  #  branches:
-  #    - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   terraform:
